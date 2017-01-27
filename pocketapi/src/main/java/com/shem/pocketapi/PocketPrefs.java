@@ -23,7 +23,7 @@ public class PocketPrefs {
     }
 
     public static String getAccessToken(Context c) {
-        return getPrefs(c).getString(ACCESS_TOKEN_KEY, "");
+        return getPrefs(c).getString(ACCESS_TOKEN_KEY, null);
     }
 
     public static void setAccessToken(Context c, String token) {
@@ -33,7 +33,7 @@ public class PocketPrefs {
     }
 
     public static String getCode(Context c) {
-        return getPrefs(c).getString(CODE_KEY, "");
+        return getPrefs(c).getString(CODE_KEY, null);
     }
 
     public static void setCode(Context c, String code) {
@@ -46,5 +46,9 @@ public class PocketPrefs {
         SharedPreferences.Editor editor = getPrefs(c).edit();
         editor.putString(USER_NAME_KEY, username);
         editor.apply();
+    }
+
+    public static String getUserName(Context c) {
+        return getPrefs(c).getString(USER_NAME_KEY, null);
     }
 }

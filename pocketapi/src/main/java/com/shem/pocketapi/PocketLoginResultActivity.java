@@ -18,7 +18,6 @@ public class PocketLoginResultActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String action = intent.getAction();
-        log("action: " + action);
         if (action == Intent.ACTION_VIEW) {
             getToken();
         } else {
@@ -32,8 +31,6 @@ public class PocketLoginResultActivity extends AppCompatActivity {
         token.enqueue(new Callback<PocketService.TokenResponse>() {
             @Override
             public void onResponse(Call<PocketService.TokenResponse> call, Response<PocketService.TokenResponse> response) {
-                log("accessToken: " + response.body().access_token);
-                log("userName: " + response.body().username);
                 PocketPrefs.setAccessToken(PocketLoginResultActivity.this, response.body().access_token);
                 PocketPrefs.setUserName(PocketLoginResultActivity.this, response.body().username);
                 finish();

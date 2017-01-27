@@ -38,7 +38,12 @@ public class PocketApi {
     }
 
     public static boolean isLoggedIn(Context c) {
-        return !PocketPrefs.getAccessToken(c).isEmpty();
+        String accessToken = PocketPrefs.getAccessToken(c);
+        return (accessToken != null && !accessToken.isEmpty());
+    }
+
+    public static String getUsername(Context c) {
+        return PocketPrefs.getUserName(c);
     }
 
     public static void getArticles(Context c, Callback<PocketService.ArticlesMap> callback) {
