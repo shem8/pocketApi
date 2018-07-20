@@ -4,17 +4,29 @@ Android library for working with the [Pocket](https://getpocket.com/about) api.
 
 ## Download
 
-Grab via Gradle:
-```groovy
-compile 'com.github.shem8:pocketapi:1.1.0'
-```
-or Maven:
+Gradle
+
+Project level build.gradle
 ```xml
-<dependency>
-  <groupId>com.github.shem8</groupId>
-  <artifactId>pocketapi</artifactId>
-  <version>1.1.0</version>
-</dependency>
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+App level build.gradle
+
+```xml
+dependencies {
+    implementation 'com.github.shem8:pocketapi:v1.1.0'
+    
+    //I'm using retrfit to fetch data
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.google.code.gson:gson:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+}
 ```
 
 ## Usage
