@@ -13,15 +13,14 @@ import com.shem.pocketapi.errors.NoKeyError;
 public class PocketKeys {
 
     private static final String CONSUMER_KEY = "shem.pocketapi.CustomerKey";
-    private static final String REDIRECT_URI_KEY = "shem.pocketapi.RedirectUri";
-
+    private static final String REDIRECT_URL = "pocketapi://pocket.com/authorizationFinished";
 
     public static String getCostumerKey(Context c) {
         return getKey(c, CONSUMER_KEY);
     }
 
     public static String getRedirectUri(Context c) {
-        return getKey(c, REDIRECT_URI_KEY);
+        return REDIRECT_URL;
     }
 
     private static String getKey(Context c, String key) {

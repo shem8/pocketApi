@@ -11,6 +11,5 @@ In this app you can find:
 For using the Pocket api you need the following:
 - Creating a [new pocket app](https://getpocket.com/developer/apps/new)- make sure you're requesting the right permissions that you need.
 - A customer key- you will get one for each app you create. A Pocket consumer key looks like this: `1234-abcd1234abcd1234abcd1234`
-- A redirect url- this is the url where the user will be redirected after he will successfully log in. It contains scheme and path. By default, the scheme is "pocketapp" plus your application's ID (which you can find at the beginning of the consumer key before the hyphen). So if your consumer key is `1234-abcdef...`, your app ID is `1234`, and your URL scheme will be `pocketapp1234`. An in our case the redirected url will be `pocketapp1234:authorizationFinished`
 
-Please add both customer key and redirect url in the right place in the app Manifest.
+Please add both customer key in the right place in the app Manifest.

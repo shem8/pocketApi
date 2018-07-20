@@ -18,10 +18,6 @@
         <meta-data
             android:name="shem.pocketapi.CustomerKey"
             android:value="XXXXX-XXXXXXXXXXXXXXXXXXXXXXXX"/>
-
-        <meta-data
-            android:name="shem.pocketapi.RedirectUri"
-            android:value="pocketappXXXXX:authorizationFinished"/>
     </application>
 
 </manifest>
