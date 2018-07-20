@@ -3,7 +3,6 @@ Android library for working with the [Pocket](https://getpocket.com/about) api.
 
 
 ## Download
---------
 
 Grab via Gradle:
 ```groovy
@@ -19,7 +18,6 @@ or Maven:
 ```
 
 ## Usage
------
 
 For using the Pocket api you need the following:
 - Creating a [new pocket app](https://getpocket.com/developer/apps/new)- make sure you're requesting the right permissions that you need.
@@ -83,16 +81,14 @@ In this app you can find:
 2. Retrieving articles list for a logged in user
 
 
-Contact Me
------------
+# Contact Me
 
 Pull requests are more than welcome.
 You can also contact me by mail: smagnezi8@gmail.com
 
 
 
-License
---------
+# License
 
     Copyright 2017 Shem Magnezi
 
